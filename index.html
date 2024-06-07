@@ -45,8 +45,8 @@
                 console.log("Attempting to open app with deep link...");
                 console.log("User Agent:", userAgent);
                 
-                // Check if the last segment has at least 8 characters
-                if (lastSegment.length >= 8) {
+                
+                
                     // Try opening the app with the deep link
                     window.location.href = deepLink;
                     setTimeout(function() {
@@ -55,10 +55,7 @@
                         // If the app is not installed, redirect to the app store
                         redirectToAppStore();
                     }, 1500); // Adjust timeout as necessary
-                } else {
-                    console.log("Last segment does not have at least 8 characters. Redirecting to app store...");
-                    redirectToAppStore();
-                }
+            
             } else {
                 console.log("Device not supported. Redirecting to app store...");
                 console.log("User Agent:", userAgent);
